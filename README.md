@@ -73,9 +73,6 @@ Each lab aims to include consistent, interview-ready artifacts:
 - **Response:** containment + hardening actions + verification
 - **Reporting:** analyst report + executive summary (where applicable)
 
-Recommended structure inside each lab folder:
-- `evidence/` • `detections/` • `configs/` • `report/`
-
 ---
 
 ## Safety & Publishing Notes
