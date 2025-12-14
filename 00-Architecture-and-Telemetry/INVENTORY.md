@@ -1,0 +1,27 @@
+# Whiterock Host Inventory
+
+This inventory is the source of truth for hostnames, IPs, and Wazuh IDs used throughout the lab.
+
+- Machine-readable: [`inventory.csv`](./inventory.csv)
+- Human-readable table: (below)
+
+| # | Hostname | Role / Purpose | OS | IP Address | Wazuh ID | Hardware / Location |
+| ---: | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | SOC-SIEM | Central Management (Wazuh Manager/Indexer/Dashboard) | Ubuntu Server LTS | 192.168.1.60 | N/A | Custom PC (Hypervisor) |
+| 2 | SOC-ADMIN | Analyst Workstation / Triage (SEC450) | Ubuntu Desktop | 192.168.1.61 | 001 | Custom PC (Hypervisor) |
+| 3 | DFIR-REMEDY | Forensic Investigation VM (SEC504 DFIR) | SIFT/REMnux VM | 192.168.1.62 | 002 | Custom PC (Hypervisor) |
+| 4 | LINUX-USER-03 | Vulnerable Web/API Target (SEC504) | Ubuntu Server LTS | 192.168.1.63 | 003 | Custom PC (Hypervisor) |
+| 5 | LINUX-ZEEK-04 | Network Sensor (Zeek/Suricata NSM/NIDS) | Raspberry Pi OS | 192.168.1.64 | 004 | Raspberry Pi 5 (Physical) |
+| 6 | LAB-DNS-05 | Internal DNS/DHCP & Utility Services | Ubuntu Server LTS | 192.168.1.65 | 005 | Custom PC (Hypervisor) |
+| 7 | TI-FEED-06 | Threat Intelligence Platform (MISP) | Lightweight Linux | 192.168.1.66 | 006 | Chromebox (Physical) |
+| 8 | LAB-FW-07 | Firewall / Zero Trust Enforcement | pfSense/OPNsense | 192.168.1.67 | 007 | Chromebox (Physical) |
+| 9 | WIN-SERVER-08 | Domain Controller (AD/GPO/Kerberos) | Windows Server 2022 | 192.168.1.68 | 008 | Custom PC (Hypervisor) |
+| 10 | WIN-USER-09 | Windows Endpoint Target 1 (Domain Joined) | Windows 10/11 Pro | 192.168.1.69 | 009 | Custom PC (Hypervisor) |
+| 11 | WIN-USER-10 | Windows Endpoint Target 2 (Sandbox) | Windows 10/11 Pro | 192.168.1.70 | 010 | Custom PC (Hypervisor) |
+| 12 | KALI-ATTACK | Attacker / Red Team (SEC504 Tools) | Kali Linux | 192.168.1.50 | N/A | Custom PC (Hypervisor) |
+| M1 | NETFLOW-LOG | NetFlow/Packet Analysis Workstation | Windows/Linux DFIR | 192.168.1.10 | N/A | Asus Zephyrus G16 (Physical) |
+| M2 | DFIR-HOST-PRO | High-Fidelity Forensics Host (Volatility/Autopsy) | SIFT/REMnux Bootable | 192.168.1.11 | N/A | Asus ZenBook OLED (Physical) |
+
+## Notes
+- Hosts with **Wazuh ID = N/A** are not enrolled as agents (e.g., attacker box) or are treated as management-only nodes.
+- Any public artifacts (PCAPs, logs, screenshots) should be **sanitized/redacted** before publishing.
